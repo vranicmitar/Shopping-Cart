@@ -1,0 +1,37 @@
+.navbar {
+  height: 15vh;
+  width: 100vw;
+  background-color: rgb(6, 6, 6);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.navbar img {
+  position: relative;
+  right: 500px;
+  height: 140px;
+  padding: 10px;
+}
+
+.navbar span {
+  color: white;
+}
+
+.links {
+  font-size: large;
+  width: 15%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.activeStyles {
+  text-decoration: none;
+  background-color: wheat;
+  color: black;
+  padding: 2px;
+}
+
+.activeStyles h3 {
+  color: black;
+}
