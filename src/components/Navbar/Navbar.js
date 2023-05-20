@@ -5,10 +5,16 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
   return (
     <header className="navbar">
-      <NavLink to="/">
-        <img src={require("../../assets/images/logo.png")}></img>;
-      </NavLink>
-      <div className="links">
+      <div style={{ marginLeft: "5%" }}>
+        <NavLink to="/">
+          <img
+            src={require("../../assets/images/istockphoto-1162434913-170667a-removebg-preview.png")}
+            alt="logo"
+          ></img>
+          ;
+        </NavLink>
+      </div>
+      <div className="links" style={{ marginRight: "5%" }}>
         <NavLink
           to={"/products"}
           className={({ isActive }) =>
