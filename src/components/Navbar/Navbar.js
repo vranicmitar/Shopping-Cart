@@ -11,9 +11,20 @@ const Navbar = () => {
             src={require("../../assets/images/istockphoto-1162434913-170667a-removebg-preview.png")}
             alt="logo"
           ></img>
-          ;
         </NavLink>
       </div>
+      <NavLink to="/" style={{ textDecoration: "none" }}>
+        <h1
+          style={{
+            position: "relative",
+            right: "430px",
+            color: "red",
+            fontSize: "28px",
+          }}
+        >
+          Shopping cart
+        </h1>
+      </NavLink>
       <div className="links" style={{ marginRight: "5%" }}>
         <NavLink
           to={"/products"}
