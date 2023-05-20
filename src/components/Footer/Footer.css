@@ -3,4 +3,13 @@
   width: 100vw;
   background-color: rgb(6, 6, 6);
   color: white;
+  display: flex;
+  justify-content: space-around;
+}
+
+.secondSection {
+  width: 150px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
 }

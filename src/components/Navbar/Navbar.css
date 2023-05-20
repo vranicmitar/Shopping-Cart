@@ -26,12 +26,16 @@
 }
 
 .activeStyles {
+  padding: 10px;
   text-decoration: none;
-  background-color: wheat;
-  color: black;
-  padding: 2px;
+  background-color: rgb(255, 178, 83);
+  border-radius: 15px;
+  color: #000000;
 }
 
-.activeStyles h3 {
-  color: black;
+.classicStyles {
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 15px;
+  color: #000000;
 }

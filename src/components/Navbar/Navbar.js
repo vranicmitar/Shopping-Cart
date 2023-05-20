@@ -17,7 +17,12 @@ const Navbar = () => {
         >
           <h3 style={{ color: "white" }}>Products</h3>
         </NavLink>
-        <NavLink to={"/cart"}>
+        <NavLink
+          to={"/cart"}
+          className={({ isActive }) =>
+            isActive ? "activeStyles" : "classicStyles"
+          }
+        >
           <h3 style={{ color: "white" }}>Cart</h3>
         </NavLink>
       </div>
