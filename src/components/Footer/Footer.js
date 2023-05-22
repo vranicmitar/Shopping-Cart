@@ -2,15 +2,18 @@ import React from "react";
 import "./Footer.css";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <div className="footer">
       <section>
-        <h5 style={{ marginTop: " 50px" }}>
-          © 2023 Products, Inc. All Rights Reserved
-        </h5>
+        <h5>© 2023 Products, Inc. All Rights Reserved</h5>
+      </section>
+      <section className="first">
+        <input type="email" placeholder="  Enter your email..."></input>
+        <button>
+          <h5>Newsletter subscription</h5>
+        </button>
       </section>
       <section className="secondSection">
         <a href="https://github.com/vranicmitar?tab=repositories">

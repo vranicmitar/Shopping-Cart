@@ -15,6 +15,7 @@
   color: white;
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 
 .secondSection {
@@ -22,4 +23,30 @@
   align-items: center;
   display: flex;
   justify-content: space-between;
+}
+
+.first input {
+  width: 300px;
+  height: 40px;
+  border: none;
+  border-radius: 60px;
+  font-size: 12px;
+}
+
+.first button {
+  background-color: black;
+  color: white;
+  font-size: 15px;
+  margin-left: 15px;
+  width: 250px;
+  height: 40px;
+  border: none;
+  border-radius: 60px;
+}
+
+.first button:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  transition: 0.5s;
 }
