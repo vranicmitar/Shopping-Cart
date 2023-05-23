@@ -5,10 +5,14 @@ import { Navbar } from "./components/Navbar/Navbar";
 import Homepage from "./pages/Homepage/Homepage";
 import Products from "./pages/Products/Products";
 import Cart from "./pages/Cart/Cart";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
     <>
+      <div>
+        <Toaster position="bottom-right" reverseOrder={false} />
+      </div>
       <Navbar />
       <main style={{ minHeight: "70vh" }}>
         <Routes>

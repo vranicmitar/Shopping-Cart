@@ -8,6 +8,7 @@ export default function Homepage() {
       <img
         src={require("../../assets/images/grocery-shopping-removebg-preview (1).png")}
         style={{ width: "70%", height: "50%" }}
+        alt="img"
       ></img>
       <Link to={"/products"}>
         <button

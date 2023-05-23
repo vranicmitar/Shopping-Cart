@@ -6,12 +6,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
-export default function ProductCard({
-  title,
-  price,
-  imageURL,
-  // onPress,
-}) {
+export default function ProductCard({ title, price, imageURL, onClick }) {
   return (
     <div className="mainContainer">
       <Card sx={{ maxWidth: 450 }} className="card">
@@ -29,7 +24,7 @@ export default function ProductCard({
             <Typography variant="body1" color="text.primary">
               Price : {price} EUR
             </Typography>
-            <Button variant="outlined" color="success">
+            <Button variant="outlined" color="success" onClick={{ onClick }}>
               Add to Cart
             </Button>
           </div>
