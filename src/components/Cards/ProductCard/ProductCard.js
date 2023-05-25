@@ -24,8 +24,8 @@ export default function ProductCard({ title, price, imageURL, onClick }) {
             <Typography variant="body1" color="text.primary">
               Price : {price} EUR
             </Typography>
-            <Button variant="outlined" color="success" onClick={{ onClick }}>
-              Add to Cart
+            <Button variant="outlined" color="success" onClick={onClick}>
+              Add to CART
             </Button>
           </div>
         </CardContent>
