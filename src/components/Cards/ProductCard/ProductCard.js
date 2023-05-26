@@ -1,12 +1,32 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./ProductCard.css";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import { CardActions, CardMedia } from "@mui/material";
+import DeleteButton from "../../Button/Button";
+import { AppContext } from "../../../context/AppContext";
 
-export default function ProductCard({ title, price, imageURL, onClick }) {
+export default function ProductCard({
+  id,
+  title,
+  price,
+  imageURL,
+  addToCart,
+  deleteFromCart,
+}) {
+  const { cart } = useContext(AppContext);
+  const [isAdded, setIsAdded] = useState(false);
+
+  useEffect(() => {
+    if (!!cart.find((product) => product.id === id)) {
+      setIsAdded(true);
+    } else {
+      setIsAdded(false);
+    }
+  }, [cart, id]);
+
   return (
     <div className="mainContainer">
       <Card sx={{ maxWidth: 450 }} className="card">
@@ -24,9 +44,20 @@ export default function ProductCard({ title, price, imageURL, onClick }) {
             <Typography variant="body1" color="text.primary">
               Price : {price} EUR
             </Typography>
-            <Button variant="outlined" color="success" onClick={onClick}>
-              Add to CART
-            </Button>
+            <CardActions style={{ display: "flex", justifyContent: "center" }}>
+              {!isAdded ? (
+                <Button
+                  style={{ color: "#2e5b36", fontWeight: "700" }}
+                  onClick={addToCart}
+                  size="small"
+                  className="btn-add"
+                >
+                  ADD TO CART
+                </Button>
+              ) : (
+                <DeleteButton onDelete={deleteFromCart} />
+              )}
+            </CardActions>
           </div>
         </CardContent>
       </Card>

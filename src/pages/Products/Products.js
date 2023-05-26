@@ -6,7 +6,7 @@ import { AppContext } from "../../context/AppContext";
 import { toast } from "react-hot-toast";
 
 const Products = () => {
-  const { products } = useContext(AppContext);
+  const { products, cart, addToCart } = useContext(AppContext);
   const [page, setPage] = useState(1);
   const handleChange = (event, value) => {
     setPage(value);
@@ -14,6 +14,8 @@ const Products = () => {
   };
   const productsPerPage = 10;
   const numOfPages = Math.ceil(products.length / productsPerPage);
+  console.log(products);
+  console.log(cart);
 
   return (
     <>
@@ -22,11 +24,15 @@ const Products = () => {
           .map((product) => (
             <ProductCard
               key={product.id}
+              id={product.id}
               imageURL={product.imageURL}
               title={product.title}
               price={product.price}
-              onClick={() => {
-                toast.success("Successfully added to cart");
+              addToCart={() => {
+                addToCart(product.id);
+              }}
+              deleteFromCart={() => {
+                toast.success("Successfully deleted from cart!");
               }}
             />
           ))
