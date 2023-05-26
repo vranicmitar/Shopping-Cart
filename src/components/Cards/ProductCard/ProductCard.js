@@ -26,6 +26,7 @@ export default function ProductCard({
       setIsAdded(false);
     }
   }, [cart, id]);
+  console.log(isAdded);
 
   return (
     <div className="mainContainer">
@@ -47,10 +48,14 @@ export default function ProductCard({
             <CardActions style={{ display: "flex", justifyContent: "center" }}>
               {!isAdded ? (
                 <Button
-                  style={{ color: "#2e5b36", fontWeight: "700" }}
+                  style={{
+                    color: "#2e5b7",
+                    fontWeight: "700",
+                  }}
                   onClick={addToCart}
                   size="small"
                   className="btn-add"
+                  variant="contained"
                 >
                   ADD TO CART
                 </Button>

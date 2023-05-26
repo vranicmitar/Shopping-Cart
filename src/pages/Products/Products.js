@@ -40,7 +40,7 @@ const Products = () => {
       </div>
       <div className="pagination">
         <Pagination
-          count={numOfPages}
+          count={numOfPages}  
           page={page}
           onChange={handleChange}
           size="large"

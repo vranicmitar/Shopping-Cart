@@ -6,7 +6,7 @@ const AppContext = createContext();
 
 function ContextProvider({ children }) {
   const [products, setProducts] = useState(productsJSON);
-  const [cart, setCart] = useState(productsJSON);
+  const [cart, setCart] = useState([]);
 
   const addToCart = (id) => {
     if (products.find((product) => product.id === id).quantity === 0) {
