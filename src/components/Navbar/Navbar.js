@@ -1,6 +1,7 @@
 import React from "react";
 import "./Navbar.css";
 import { NavLink } from "react-router-dom";
+import ShoppingBagTwoToneIcon from "@mui/icons-material/ShoppingBagTwoTone";
 
 const Navbar = () => {
   return (
@@ -40,7 +41,9 @@ const Navbar = () => {
             isActive ? "activeStyles" : "classicStyles"
           }
         >
-          <h3 style={{ color: "white" }}>Cart</h3>
+          <h3 style={{ color: "white" }}>
+            <ShoppingBagTwoToneIcon sx={{ fontSize: "30px" }} />
+          </h3>
         </NavLink>
       </div>
     </header>

@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import "./Cart.css";
+import { AppContext } from "../../context/AppContext";
 
 const Cart = () => {
+  const { cart } = useContext(AppContext);
   return (
     <div>
       <img
@@ -21,6 +23,12 @@ const Cart = () => {
           </button>
         </Link>
       </section>
+      <h5
+        style={{ position: "relative", bottom: "510px", left: "92.5%" }}
+        className="numberOfProducts"
+      >
+        {cart.length}
+      </h5>
     </div>
   );
 };

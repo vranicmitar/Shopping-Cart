@@ -44,3 +44,12 @@
 .button-89:hover {
   cursor: pointer;
 }
+
+.numberOfProducts {
+  background-color: yellow;
+  width: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
