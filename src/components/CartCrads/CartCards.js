@@ -63,8 +63,8 @@ export default function CartCards({
               <Box
                 sx={{ ...style, width: 400, height: 140, textAlign: "center" }}
               >
-                <h3 id="parent-modal-title">
-                  Are you sure you want to remove the product from the cart?{" "}
+                <h3 style={{ fontWeight: 100 }}>
+                  Are you sure you want to remove the product from the cart?
                 </h3>
                 <div style={{ marginTop: 20 }}>
                   <ButtonThird
@@ -78,15 +78,28 @@ export default function CartCards({
             </Modal>
           </div>
           <div className="increaseDecrease">
-            <Button
-              onClick={() => {
-                decrease(id);
-              }}
-              style={{ width: 30, fontSize: 20 }}
-              variant="outlined"
-            >
-              -
-            </Button>
+            {quantity <= 1 ? (
+              <Button
+                onClick={() => {
+                  decrease(id);
+                }}
+                style={{ width: 30, fontSize: 20 }}
+                variant="outlined"
+                disabled
+              >
+                -
+              </Button>
+            ) : (
+              <Button
+                onClick={() => {
+                  decrease(id);
+                }}
+                style={{ width: 30, fontSize: 20 }}
+                variant="outlined"
+              >
+                -
+              </Button>
+            )}
             <Button
               onClick={() => {
                 increase(id);
