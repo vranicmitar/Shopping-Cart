@@ -6,14 +6,19 @@ import CartCards from "../../components/CartCrads/CartCards";
 
 const Cart = () => {
   const { cart } = useContext(AppContext);
+  const totalPrice = cart.reduce((total, item) => total + item.price, 0);
+
   return (
     <>
       {cart.length !== 0 ? (
         <div className="cartCards">
           {/* <p>producstii</p> */}
-          <h1 style={{ textAlign: "center", borderBottom: "1px solid green" }}>
+          <h1 style={{ position: "absolute", top: 150, left: 100 }}>
             YOUR BAG
           </h1>
+          <h3 style={{ position: "absolute", top: 200, left: 100 }}>
+            Total [{cart.length}] : {totalPrice} $
+          </h3>
           {cart.map((product) => (
             <CartCards
               key={product.id}
