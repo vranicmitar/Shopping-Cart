@@ -12,7 +12,7 @@ const Cart = () => {
         <div className="cartCards">
           {/* <p>producstii</p> */}
           <h1 style={{ textAlign: "center", borderBottom: "1px solid green" }}>
-            Your cart
+            YOUR BAG
           </h1>
           {cart.map((product) => (
             <CartCards
@@ -43,12 +43,6 @@ const Cart = () => {
               </button>
             </Link>
           </section>
-          <h5
-            style={{ position: "relative", bottom: "510px", left: "92.5%" }}
-            className="numberOfProducts"
-          >
-            {cart.length}
-          </h5>
         </div>
       )}
     </>

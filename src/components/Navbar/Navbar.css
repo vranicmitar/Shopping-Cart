@@ -48,3 +48,15 @@
   border-radius: 15px;
   color: #000000;
 }
+
+.cartLength {
+  position: absolute;
+  top: 33px;
+  left: 92.5vw;
+  background-color: yellow;
+  width: 15px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

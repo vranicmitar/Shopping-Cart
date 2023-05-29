@@ -20,7 +20,7 @@ export default function DeleteButton({ onDelete }) {
           </ChipDelete>
         }
       >
-        Clear
+        Delete
       </Chip>
     </Box>
   );

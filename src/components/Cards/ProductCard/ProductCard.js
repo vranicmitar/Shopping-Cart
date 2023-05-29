@@ -55,7 +55,8 @@ export default function ProductCard({
                   onClick={addToCart}
                   size="small"
                   className="btn-add"
-                  variant="contained"
+                  variant="outlined"
+                  color="success"
                 >
                   ADD TO CART
                 </Button>
