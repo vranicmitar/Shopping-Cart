@@ -3,10 +3,9 @@ import ProductCard from "../../components/Cards/ProductCard/ProductCard";
 import Pagination from "@mui/material/Pagination";
 import "./Products.css";
 import { AppContext } from "../../context/AppContext";
-import { toast } from "react-hot-toast";
 
 const Products = () => {
-  const { products, cart, addToCart } = useContext(AppContext);
+  const { products, cart, addToCart, deleteFromCart } = useContext(AppContext);
   const [page, setPage] = useState(1);
   const handleChange = (event, value) => {
     setPage(value);
@@ -32,7 +31,7 @@ const Products = () => {
                 addToCart(product.id);
               }}
               deleteFromCart={() => {
-                toast.success("Successfully deleted from cart!");
+                deleteFromCart(product.id);
               }}
             />
           ))
