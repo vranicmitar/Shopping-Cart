@@ -21,7 +21,7 @@ const Navbar = () => {
           <h1
             style={{
               position: "relative",
-              right: "430px",
+              right: "380px",
               color: "red",
               fontSize: "28px",
             }}
@@ -30,6 +30,14 @@ const Navbar = () => {
           </h1>
         </NavLink>
         <div className="links" style={{ marginRight: "5%" }}>
+          <NavLink
+            to={"/sale"}
+            className={({ isActive }) =>
+              isActive ? "activeStyles" : "classicStyles"
+            }
+          >
+            <h3 style={{ color: "white" }}>On Sale</h3>
+          </NavLink>
           <NavLink
             to={"/products"}
             className={({ isActive }) =>

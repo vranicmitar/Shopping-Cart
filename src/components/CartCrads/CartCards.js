@@ -44,7 +44,7 @@ export default function CartCards({
         <div className="product-details">
           <h2 className="productName">{productName}</h2>
           <p className="productPrice"> {productPrice * quantity}$</p>
-          <p className="product-quantity">Quantity: {quantity}</p>
+          <p className="product\-quantity">Quantity: {quantity}</p>
           <div className="buttonn">
             {/* <DeleteButtonFromCart
               onDelete={() => {
@@ -97,7 +97,7 @@ export default function CartCards({
                 style={{ width: 30, fontSize: 20 }}
                 variant="outlined"
               >
-                -
+                - 
               </Button>
             )}
             <Button
