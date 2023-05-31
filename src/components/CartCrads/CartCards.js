@@ -97,7 +97,7 @@ export default function CartCards({
                 style={{ width: 30, fontSize: 20 }}
                 variant="outlined"
               >
-                - 
+                -
               </Button>
             )}
             <Button

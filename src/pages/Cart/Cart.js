@@ -27,6 +27,7 @@ const Cart = () => {
               productName={product.title}
               productPrice={product.price}
               quantity={product.quantityInCart}
+              // discountedPrice={product.discountedPrice}
             />
           ))}
         </div>

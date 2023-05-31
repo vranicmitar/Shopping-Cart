@@ -5,21 +5,25 @@ import "./Products.css";
 import { AppContext } from "../../context/AppContext";
 
 const Products = () => {
-  const { products, cart, addToCart, deleteFromCart } = useContext(AppContext);
+  const { products, addToCart, deleteFromCart } = useContext(AppContext);
   const [page, setPage] = useState(1);
   const handleChange = (event, value) => {
     setPage(value);
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   };
   const productsPerPage = 10;
-  const numOfPages = Math.ceil(products.length / productsPerPage);
-  console.log(products);
-  console.log(cart);
+  const numOfPages = Math.ceil(
+    products.filter((product) => product.quantity <= 20).length /
+      productsPerPage
+  );
+  // console.log(products);
+  // console.log(cart);
 
   return (
     <>
       <div className="card">
         {products
+          .filter((product) => product.quantity <= 20)
           .map((product) => (
             <ProductCard
               key={product.id}

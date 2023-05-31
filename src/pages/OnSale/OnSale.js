@@ -3,6 +3,7 @@ import ProductCard from "../../components/Cards/ProductCard/ProductCard";
 import Pagination from "@mui/material/Pagination";
 import "./OnSale.css";
 import { AppContext } from "../../context/AppContext";
+import SaleProductCard from "../../components/Cards/SaleProductCard/SaleProductCard";
 
 const OnSale = () => {
   const { onSaleProducts, cart, addToCart, deleteFromCart } =
@@ -21,12 +22,14 @@ const OnSale = () => {
       <div className="card">
         {onSaleProducts
           .map((product) => (
-            <ProductCard
+            <SaleProductCard
               key={product.id}
               id={product.id}
               imageURL={product.imageURL}
               title={product.title}
               price={product.price}
+              discountedPrice={product.discountedPrice}
+              discountPercentage={product.discountPercentage}
               addToCart={() => {
                 addToCart(product.id);
               }}

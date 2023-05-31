@@ -33,10 +33,10 @@ const Navbar = () => {
           <NavLink
             to={"/sale"}
             className={({ isActive }) =>
-              isActive ? "activeStyles" : "classicStyles"
+              isActive ? "activeStyless" : "classicStyless"
             }
           >
-            <h3 style={{ color: "white" }}>On Sale</h3>
+            <h3>On Sale</h3>
           </NavLink>
           <NavLink
             to={"/products"}
