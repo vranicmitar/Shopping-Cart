@@ -1,5 +1,4 @@
 import React, { useContext, useState } from "react";
-import ProductCard from "../../components/Cards/ProductCard/ProductCard";
 import Pagination from "@mui/material/Pagination";
 import "./OnSale.css";
 import { AppContext } from "../../context/AppContext";
@@ -27,7 +26,10 @@ const OnSale = () => {
               id={product.id}
               imageURL={product.imageURL}
               title={product.title}
-              price={product.price}
+              price={
+                product.price -
+                (product.price * product.discountPercentage) / 100
+              }
               discountedPrice={product.discountedPrice}
               discountPercentage={product.discountPercentage}
               addToCart={() => {

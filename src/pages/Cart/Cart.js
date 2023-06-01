@@ -25,7 +25,9 @@ const Cart = () => {
               id={product.id}
               productImage={product.imageURL}
               productName={product.title}
-              productPrice={product.price}
+              productPrice={
+                product.quantity > 20 ? product.discountedPrice : product.price
+              }
               quantity={product.quantityInCart}
               // discountedPrice={product.discountedPrice}
             />
