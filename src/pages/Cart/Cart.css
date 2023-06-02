@@ -53,3 +53,25 @@
   justify-content: center;
   align-items: center;
 }
+
+.buttonPayment {
+  width: 280px;
+  height: 50px;
+  border-radius: 50px;
+  position: absolute;
+  top: 320px;
+  left: 90px;
+  border: none;
+  color: white;
+  font-weight: 900;
+  background-color: black;
+}
+
+.buttonPayment:hover {
+  color: black;
+  font-weight: 900;
+  background-color: white;
+  border: 1px solid black;
+  cursor: pointer;
+  transition: 0.3s;
+}
