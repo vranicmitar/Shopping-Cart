@@ -4,17 +4,15 @@ import "./Cart.css";
 import { AppContext } from "../../context/AppContext";
 import CartCards from "../../components/CartCrads/CartCards";
 import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
-import { TextField } from "@mui/material";
-import { LocalShipping, Store } from "@mui/icons-material";
+import { Validation } from "../../components/Validation/Validation";
 
 const style = {
   position: "absolute",
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 1000,
+  width: 650,
   height: 650,
   bgcolor: "background.paper",
   border: "1px solid #000",
@@ -62,116 +60,7 @@ const Cart = () => {
               aria-describedby="modal-modal-description"
             >
               <Box sx={style}>
-                <Typography
-                  id="modal-modal-title"
-                  variant="h4"
-                  component="h2"
-                  sx={{ fontWeight: 700 }}
-                >
-                  CONTACT DETAILS
-                </Typography>
-                <form>
-                  <TextField
-                    sx={{ marginTop: 2, width: 300 }}
-                    id="outlined-basic"
-                    label="Email"
-                    variant="outlined"
-                  />
-                </form>
-
-                <Typography
-                  id="modal-modal-title"
-                  variant="h4"
-                  component="h2"
-                  sx={{ marginTop: 3, fontWeight: 700 }}
-                >
-                  SHIPPING ADDRESS
-                </Typography>
-                <form
-                  style={{
-                    marginTop: 20,
-                    display: "flex",
-                    justifyContent: "space-between",
-                    width: "75%",
-                    flexWrap: "wrap",
-                  }}
-                >
-                  <TextField
-                    sx={{ width: 300 }}
-                    id="outlined-basic"
-                    label="First Name"
-                    variant="outlined"
-                  />
-                  <TextField
-                    sx={{ width: 300 }}
-                    id="outlined-basic"
-                    label="Last Name"
-                    variant="outlined"
-                  />
-                  <TextField
-                    sx={{ width: 300, marginTop: 3 }}
-                    id="outlined-basic"
-                    label="Phone number"
-                    variant="outlined"
-                  />
-                  <TextField
-                    sx={{ width: 300, marginTop: 3 }}
-                    id="outlined-basic"
-                    label="Address"
-                    variant="outlined"
-                  />
-                </form>
-                <Typography
-                  id="modal-modal-title"
-                  variant="h4"
-                  component="h2"
-                  sx={{ marginTop: 3, fontWeight: 700 }}
-                >
-                  DELIVRY OPTIONS
-                </Typography>
-                <div
-                  style={{
-                    border: "2px solid black",
-                    padding: 40,
-                    width: "75%",
-                    height: 75,
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                  }}
-                >
-                  <section>
-                    {" "}
-                    <LocalShipping
-                      style={{ position: "absolute", left: 50 }}
-                    />{" "}
-                    <span>STANDARD DELIVRY</span>
-                  </section>
-
-                  <section>
-                    <p>5$</p>
-                  </section>
-                </div>
-                <div
-                  style={{
-                    border: "2px solid black",
-                    padding: 40,
-                    width: "75%",
-                    height: 75,
-                    marginTop: 15,
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                  }}
-                >
-                  <section>
-                    <Store style={{ position: "absolute", left: 50 }} />{" "}
-                    <span>COLLECT IN STORE</span>
-                  </section>
-                  <section>
-                    <p>FREE</p>
-                  </section>
-                </div>
+                <Validation />
               </Box>
             </Modal>
           </div>
