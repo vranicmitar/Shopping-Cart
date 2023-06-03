@@ -49,13 +49,11 @@ export default function SaleProductCard({
             {title}
           </Typography>
           <div className="description">
-            <Typography variant="body1" color="text.primary">
-              <p style={{ textDecoration: "line-through", color: "grey" }}>
-                Price : {price} EUR
-              </p>
-              <br></br>{" "}
-              <p style={{ fontSize: 18 }}>Discount : {discountedPrice} EUR</p>
-            </Typography>
+            <p style={{ textDecoration: "line-through", color: "grey" }}>
+              Price : {price} EUR
+            </p>
+            <br></br>{" "}
+            <p style={{ fontSize: 18 }}>Discount : {discountedPrice} EUR</p>
             <CardActions style={{ display: "flex", justifyContent: "center" }}>
               {!isAdded ? (
                 <Button
