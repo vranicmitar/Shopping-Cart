@@ -95,7 +95,7 @@ export const Validation = () => {
           onChange={handleChange}
           id="email"
           type="email"
-          label="Enter your email"
+          label="Enter email"
           onBlur={handleBlur}
           className={errors.email && touched.email ? "input-error" : ""}
         ></TextField>
@@ -109,7 +109,7 @@ export const Validation = () => {
           onChange={handleChange}
           id="firstName"
           type="text"
-          label="Enter your first name"
+          label="Enter first name"
           onBlur={handleBlur}
           className={errors.firstName && touched.firstName ? "input-error" : ""}
         ></TextField>
@@ -123,7 +123,7 @@ export const Validation = () => {
           onChange={handleChange}
           id="lastName"
           type="text"
-          label="Enter your last name"
+          label="Enter last name"
           onBlur={handleBlur}
           className={errors.lastName && touched.lastName ? "input-error" : ""}
         ></TextField>
@@ -137,7 +137,7 @@ export const Validation = () => {
           onChange={handleChange}
           id="phone"
           type="number"
-          label="Enter your phone number"
+          label="Enter phone number"
           onBlur={handleBlur}
           className={errors.phone && touched.phone ? "input-error" : ""}
         ></TextField>
@@ -151,7 +151,7 @@ export const Validation = () => {
           onChange={handleChange}
           id="address"
           type="text"
-          label="Enter your address"
+          label="Enter address"
           onBlur={handleBlur}
           className={errors.address && touched.address ? "input-error" : ""}
         ></TextField>

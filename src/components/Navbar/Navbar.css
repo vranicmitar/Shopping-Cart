@@ -64,11 +64,11 @@
 
 .cartLength {
   position: absolute;
-  top: 32px;
-  left: 92.5vw;
+  top: 33px;
+  left: 92.7vw;
   background-color: yellow;
   width: 15px;
-  border-radius: 50%;
+  border-radius: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
